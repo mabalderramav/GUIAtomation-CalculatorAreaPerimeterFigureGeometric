@@ -1,27 +1,32 @@
 package org.fundacionjala.calculator;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by AldoBalderrama on 8/24/2016.
+ * Test for {@link Square}
  */
 public class SquareTest {
+    private static final double DELTA = 0;
+    private FigureGeometric square;
+
+    @Before
+    public void setUp() {
+        final double side = 3;
+        square = new Square(side);
+    }
+
     @Test
     public void test_calculateArea() {
-        double delta = 0;
-        double side = 3;
-        FigureGeometric square = new Square(side);
         double expected = 9;
-        assertEquals(expected, square.calculateArea(), delta);
+        assertEquals(expected, square.calculateArea(), DELTA);
     }
+
     @Test
     public void test_calculatePerimeter() {
-        double delta = 0;
-        double side = 3;
-        FigureGeometric square = new Square(side);
-        double expected = 12;
-        assertEquals(expected, square.calculatePerimeter(), delta);
+        final double expected = 12;
+        assertEquals(expected, square.calculatePerimeter(), DELTA);
     }
 }

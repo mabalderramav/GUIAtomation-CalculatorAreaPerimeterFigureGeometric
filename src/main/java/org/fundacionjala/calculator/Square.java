@@ -1,7 +1,7 @@
 package org.fundacionjala.calculator;
 
 /**
- * Created by AldoBalderrama on 8/24/2016.
+ * Calculates the perimeter and area
  */
 public class Square implements FigureGeometric {
     private final double side;
@@ -10,12 +10,18 @@ public class Square implements FigureGeometric {
         this.side = side;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public double calculateArea() {
         double exponent = 2;
         return Math.pow(side, exponent);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public double calculatePerimeter() {
         return 4 * side;

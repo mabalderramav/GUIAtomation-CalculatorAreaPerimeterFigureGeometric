@@ -1,19 +1,27 @@
 package org.fundacionjala.calculator;
 
 /**
- * Created by AldoBalderrama on 8/24/2016.
+ * Calculates the perimeter and area
  */
 public class Circle implements FigureGeometric {
     private final double radio;
-    public Circle(double radio){
+
+    public Circle(double radio) {
         this.radio = radio;
     }
+
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public double calculateArea() {
         int exponent = 2;
-        return Math.PI * Math.pow(this.radio,exponent);
+        return Math.PI * Math.pow(this.radio, exponent);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public double calculatePerimeter() {
         return 2 * Math.PI * this.radio;

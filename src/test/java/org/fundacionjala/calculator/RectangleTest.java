@@ -1,30 +1,33 @@
 package org.fundacionjala.calculator;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by AldoBalderrama on 8/24/2016.
+ * Test for {@link Rectangle}
  */
 public class RectangleTest {
+    private static final double DELTA = 0;
+    private FigureGeometric rectangle;
+
+    @Before
+    public void setUp() {
+        final double sideA = 3;
+        final double sideB = 4;
+        rectangle = new Rectangle(sideA, sideB);
+    }
+
     @Test
     public void test_calculateArea() {
-        double delta = 0;
-        double sideA = 3;
-        double sideB = 4;
-        FigureGeometric rectangle = new Rectangle(sideA, sideB);
-        double expected = 12;
-        assertEquals(expected, rectangle.calculateArea(), delta);
+        final double expected = 12;
+        assertEquals(expected, rectangle.calculateArea(), DELTA);
     }
 
     @Test
     public void test_calculatePerimeter() {
-        double delta = 0;
-        double sideA = 3;
-        double sideB = 4;
-        FigureGeometric rectangle = new Rectangle(sideA, sideB);
-        double expected = 14;
-        assertEquals(expected, rectangle.calculatePerimeter(), delta);
+        final double expected = 14;
+        assertEquals(expected, rectangle.calculatePerimeter(), DELTA);
     }
 }
