@@ -20,7 +20,7 @@ public class SquareTest {
 
     @Test
     public void test_calculateArea() {
-        double expected = 9;
+        final double expected = 9;
         assertEquals(expected, square.calculateArea(), DELTA);
     }
 

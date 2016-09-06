@@ -25,6 +25,6 @@ public class Rectangle implements FigureGeometric {
      */
     @Override
     public double calculatePerimeter() {
-        return (2 * this.sideA) + (2 * this.sideB);
+        return 2 * (this.sideA + this.sideB);
     }
 }
